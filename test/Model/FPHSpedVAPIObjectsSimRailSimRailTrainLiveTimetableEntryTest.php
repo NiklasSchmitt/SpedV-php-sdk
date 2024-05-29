@@ -161,15 +161,6 @@ class FPHSpedVAPIObjectsSimRailSimRailTrainLiveTimetableEntryTest extends TestCa
     }
 
     /**
-     * Test attribute "speed_limits"
-     */
-    public function testPropertySpeedLimits()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "real_arrival"
      */
     public function testPropertyRealArrival()

@@ -13,7 +13,6 @@ Name | Type | Description | Notes
 **line** | **int** |  | [readonly]
 **km** | **float** |  | [readonly]
 **max_speed** | **int** |  | [readonly]
-**speed_limits** | [**\OpenAPI\Client\Model\SystemCollectionsGenericKeyValuePair2SystemDoubleSystemPrivateCoreLibVersion8000CultureNeutralPublicKeyToken7cec85d7bea7798eSystemInt32SystemPrivateCoreLibVersion8000CultureNeutralPublicKeyToken7cec85d7bea7798e[]**](SystemCollectionsGenericKeyValuePair2SystemDoubleSystemPrivateCoreLibVersion8000CultureNeutralPublicKeyToken7cec85d7bea7798eSystemInt32SystemPrivateCoreLibVersion8000CultureNeutralPublicKeyToken7cec85d7bea7798e.md) |  |
 **real_arrival** | **string** |  | [readonly]
 **real_departure** | **string** |  | [readonly]
 

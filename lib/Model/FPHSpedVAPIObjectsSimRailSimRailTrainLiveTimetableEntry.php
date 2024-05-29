@@ -66,7 +66,6 @@ class FPHSpedVAPIObjectsSimRailSimRailTrainLiveTimetableEntry implements ModelIn
         'line' => 'int',
         'km' => 'float',
         'max_speed' => 'int',
-        'speed_limits' => '\OpenAPI\Client\Model\SystemCollectionsGenericKeyValuePair2SystemDoubleSystemPrivateCoreLibVersion8000CultureNeutralPublicKeyToken7cec85d7bea7798eSystemInt32SystemPrivateCoreLibVersion8000CultureNeutralPublicKeyToken7cec85d7bea7798e[]',
         'real_arrival' => 'string',
         'real_departure' => 'string'
     ];
@@ -88,7 +87,6 @@ class FPHSpedVAPIObjectsSimRailSimRailTrainLiveTimetableEntry implements ModelIn
         'line' => 'int32',
         'km' => 'double',
         'max_speed' => 'int32',
-        'speed_limits' => null,
         'real_arrival' => 'time-span',
         'real_departure' => 'time-span'
     ];
@@ -108,7 +106,6 @@ class FPHSpedVAPIObjectsSimRailSimRailTrainLiveTimetableEntry implements ModelIn
         'line' => false,
         'km' => false,
         'max_speed' => false,
-        'speed_limits' => true,
         'real_arrival' => true,
         'real_departure' => true
     ];
@@ -208,7 +205,6 @@ class FPHSpedVAPIObjectsSimRailSimRailTrainLiveTimetableEntry implements ModelIn
         'line' => 'line',
         'km' => 'km',
         'max_speed' => 'maxSpeed',
-        'speed_limits' => 'speedLimits',
         'real_arrival' => 'realArrival',
         'real_departure' => 'realDeparture'
     ];
@@ -228,7 +224,6 @@ class FPHSpedVAPIObjectsSimRailSimRailTrainLiveTimetableEntry implements ModelIn
         'line' => 'setLine',
         'km' => 'setKm',
         'max_speed' => 'setMaxSpeed',
-        'speed_limits' => 'setSpeedLimits',
         'real_arrival' => 'setRealArrival',
         'real_departure' => 'setRealDeparture'
     ];
@@ -248,7 +243,6 @@ class FPHSpedVAPIObjectsSimRailSimRailTrainLiveTimetableEntry implements ModelIn
         'line' => 'getLine',
         'km' => 'getKm',
         'max_speed' => 'getMaxSpeed',
-        'speed_limits' => 'getSpeedLimits',
         'real_arrival' => 'getRealArrival',
         'real_departure' => 'getRealDeparture'
     ];
@@ -319,7 +313,6 @@ class FPHSpedVAPIObjectsSimRailSimRailTrainLiveTimetableEntry implements ModelIn
         $this->setIfExists('line', $data ?? [], null);
         $this->setIfExists('km', $data ?? [], null);
         $this->setIfExists('max_speed', $data ?? [], null);
-        $this->setIfExists('speed_limits', $data ?? [], null);
         $this->setIfExists('real_arrival', $data ?? [], null);
         $this->setIfExists('real_departure', $data ?? [], null);
     }
@@ -377,9 +370,6 @@ class FPHSpedVAPIObjectsSimRailSimRailTrainLiveTimetableEntry implements ModelIn
         }
         if ($this->container['max_speed'] === null) {
             $invalidProperties[] = "'max_speed' can't be null";
-        }
-        if ($this->container['speed_limits'] === null) {
-            $invalidProperties[] = "'speed_limits' can't be null";
         }
         if ($this->container['real_arrival'] === null) {
             $invalidProperties[] = "'real_arrival' can't be null";
@@ -669,40 +659,6 @@ class FPHSpedVAPIObjectsSimRailSimRailTrainLiveTimetableEntry implements ModelIn
             throw new \InvalidArgumentException('non-nullable max_speed cannot be null');
         }
         $this->container['max_speed'] = $max_speed;
-
-        return $this;
-    }
-
-    /**
-     * Gets speed_limits
-     *
-     * @return \OpenAPI\Client\Model\SystemCollectionsGenericKeyValuePair2SystemDoubleSystemPrivateCoreLibVersion8000CultureNeutralPublicKeyToken7cec85d7bea7798eSystemInt32SystemPrivateCoreLibVersion8000CultureNeutralPublicKeyToken7cec85d7bea7798e[]
-     */
-    public function getSpeedLimits()
-    {
-        return $this->container['speed_limits'];
-    }
-
-    /**
-     * Sets speed_limits
-     *
-     * @param \OpenAPI\Client\Model\SystemCollectionsGenericKeyValuePair2SystemDoubleSystemPrivateCoreLibVersion8000CultureNeutralPublicKeyToken7cec85d7bea7798eSystemInt32SystemPrivateCoreLibVersion8000CultureNeutralPublicKeyToken7cec85d7bea7798e[] $speed_limits speed_limits
-     *
-     * @return self
-     */
-    public function setSpeedLimits($speed_limits)
-    {
-        if (is_null($speed_limits)) {
-            array_push($this->openAPINullablesSetToNull, 'speed_limits');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('speed_limits', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['speed_limits'] = $speed_limits;
 
         return $this;
     }
