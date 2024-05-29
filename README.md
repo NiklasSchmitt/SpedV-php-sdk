@@ -3,10 +3,13 @@
 I've generated a php client for the SpedV API: https://api.sped-v.de/swagger/index.html. Have fun.
 
 
-There are two little things changed into swager file:
+There are some little things changed in the swagger file before I've generated the client:
   - `FPH.SpedV.API.Objects.Money.MoneyEÜRData` renamed to `FPH.SpedV.API.Objects.Money.MoneyEURData`
-  - "System.Collections.Generic.KeyValuePair\`2" renamed to `System.Collections.Generic.KeyValuePair2`
-    - Something still wrong there, so I have generated with `--skip-validate-spec`.
+  - Removed broken model ``System.Collections.Generic.KeyValuePair`2[[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]`` from swagger file.
+  - Deleted `speedLimits` from `FPH.SpedV.API.Objects.SimRail.SimRailTrainLiveTimetableEntry` because of the broken model.
+
+
+I've generated the client with the following command: `openapi-generator-cli generate -g php -i swagger.json -o ./ --git-user-id NiklasSchmitt --git-repo-id spedv-php-sdk`
 
 **Important note:** To use the SpedV API, you need to have SpedV Plus! See https://www.sped-v.de/plus for more information.
 

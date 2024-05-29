@@ -9290,7 +9290,6 @@
           "realDeparture",
           "scheduledArrival",
           "scheduledDeparture",
-          "speedLimits",
           "station",
           "stopType",
           "track"
@@ -9346,13 +9345,6 @@
             "type": "integer",
             "format": "int32",
             "readOnly": true
-          },
-          "speedLimits": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/System.Collections.Generic.KeyValuePair2[[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
-            },
-            "nullable": true
           },
           "realArrival": {
             "type": "string",
@@ -12576,24 +12568,6 @@
             },
             "nullable": true,
             "readOnly": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "System.Collections.Generic.KeyValuePair2[[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]": {
-        "required": [
-          "key",
-          "value"
-        ],
-        "type": "object",
-        "properties": {
-          "key": {
-            "type": "number",
-            "format": "double"
-          },
-          "value": {
-            "type": "integer",
-            "format": "int32"
           }
         },
         "additionalProperties": false
